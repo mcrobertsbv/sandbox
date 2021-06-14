@@ -1,3 +1,3 @@
 print("Hello World")
 
-priny("test deliberate error")
+print("fixed deliberate error")
