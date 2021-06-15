@@ -1,16 +1,14 @@
-image: r-base:3.3.1
-
-test1:
+build:python:
+  image: python:3.9
   script:
     - echo "Running Python"
     - python hello_world.py # this should be you unit test script(s)
-    
-    
-test2:
+
+build:R:
+  image: r-base:3.3.1
   script:
   - echo "Running R code"
   - Rscript '--vanilla' hello_world.R # Use the name of you test script
 
-image: python:3.9
 
 
