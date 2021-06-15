@@ -5,5 +5,5 @@ before_script:
   
 test:
   script:
-    - python hello_world.py test
+    - python hello_world.py
 
