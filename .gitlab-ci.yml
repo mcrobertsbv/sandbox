@@ -1,12 +1,12 @@
 image: r-base:3.3.1
 
-test:
+test1:
   script:
     - echo "Running Python"
     - python hello_world.py # this should be you unit test script(s)
     
     
-test:
+test2:
   script:
   - echo "Running R code"
   - Rscript '--vanilla' hello_world.R # Use the name of you test script
