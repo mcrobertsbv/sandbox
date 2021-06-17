@@ -3,7 +3,7 @@ stages:
 
 before_script:
   - python -V  # Print out python version for debugging
-  - Rscript -e 'print(R.version())'
+  - Rscript -e 'print(R.version.string)'
 
   
 test_one:
