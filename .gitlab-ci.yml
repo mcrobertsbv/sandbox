@@ -2,7 +2,8 @@ stages:
   - test
 
 before_script:
-  - py -V  # Print out python version for debugging
+  - python -V  # Print out python version for debugging
+  - R -e 'print(R.version())'
 
   
 test_one:
@@ -12,3 +13,11 @@ test_one:
   - sandbox
   script:
     - py hello_world.py
+
+test_two:
+  stage: test
+  tags:
+    - test
+    - sandbox
+  script: 
+    - Rscript hello_world.R
