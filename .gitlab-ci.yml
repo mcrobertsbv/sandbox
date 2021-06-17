@@ -1,9 +1,14 @@
-tags: 
+stages: 
+  - test
+
+before_script:
+  - py -V  # Print out python version for debugging
+
+  
+test_one:
+  stage: test
+  tags: 
   - test
   - sandbox
-before_script:
-  - python -V  # Print out python version for debugging
-  
-test:
   script:
     - py hello_world.py
