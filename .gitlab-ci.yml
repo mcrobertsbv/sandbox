@@ -10,10 +10,9 @@
 
 workflow:
   rules:
-    - if: $CI_MERGE_REQUEST_TITLE =~ /Draft/i
-      when: never
+    - if: $CI_MERGE_REQUEST_IID
     - if: $CI_MERGE_REQUEST_TITLE !~ /Draft/i
-      when: always
+
 
 stages:          # List of stages for jobs, and their order of execution
   - build
