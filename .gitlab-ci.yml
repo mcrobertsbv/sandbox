@@ -10,7 +10,7 @@
 
 workflow:
   rules:
-    - if: $CI_MERGE_REQUEST_TITLE !~ /\(D|d)raft/
+    - if: $CI_MERGE_REQUEST_TITLE !~ /(D|d)raft/
       when: always
 
 stages:          # List of stages for jobs, and their order of execution
