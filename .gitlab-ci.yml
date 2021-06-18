@@ -9,7 +9,10 @@
 # For more information, see: https://docs.gitlab.com/ee/ci/yaml/README.html#stages
 
 workflow:
-  - if: $CI_MERGE_REQUEST_IID && $CI_MERGE_REQUEST_TITLE !~ /Draft/i
+  rules:
+    - if: $CI_COMMIT_MESSAGE =~ /-draft$/
+      when: never
+    - if: '$CI_PIPELINE_SOURCE == "push"'
 
 
 stages:          # List of stages for jobs, and their order of execution
