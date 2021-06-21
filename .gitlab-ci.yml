@@ -19,10 +19,12 @@ build-job:       # This job runs in the build stage, which runs first.
     - echo "$CI_COMMIT_MESSAGE"
     - echo "Compile complete."
     - echo "This message shouldn't be seen, execpt for manual executions and in develop"
-  only: 
-    - develop
-  except:
-    - manual
+rules:
+    - if: '$CI_COMMIT_BRANCH == "develop"'
+      when: always
+    - if: '$CI_COMMIT_BRANCH == null'
+      when: never
+    - when: manual
 
 test_job:
   stage: test
