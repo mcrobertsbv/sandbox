@@ -27,5 +27,5 @@ test_job:
   stage: test
   script:
     - echo "Hi, this job executed correctly"
-    - echo "$CI_MERGE_REQUEST_TITLE"
+    - echo $CI_MERGE_REQUEST_TITLE
 
