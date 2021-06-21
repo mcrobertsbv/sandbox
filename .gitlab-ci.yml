@@ -28,7 +28,7 @@ build-job:       # This job runs in the build stage, which runs first.
 test_job:
   stage: test
   script:
-    - echo "Hi, this job executed correctly"
+    - echo "Hi, this job always executes"
     - echo $CI_MERGE_REQUEST_TITLE
     - echo $CI_COMMIT_BRANCH
 
