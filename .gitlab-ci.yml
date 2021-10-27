@@ -13,9 +13,9 @@ stages:
 before_script:
       - echo "Before script"
       # Pull repositories
-      - git -C "C:\sandbox" pull
+      - cd C:\sandbox
       - git checkout experiment_CICD_MAS
-      - git pull
+      - git "pull
       
 test_one:    
       stage: test
