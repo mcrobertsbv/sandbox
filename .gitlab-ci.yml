@@ -10,12 +10,12 @@ workflow:
 stages:   
       - test
 
-before_script:
-      - echo "Before script"
-      # Pull repositories
-      - cd C:\sandbox
-      - git checkout experiment_CICD_MAS
-      - git "pull
+# before_script:
+#       - echo "Before script"
+#       # Pull repositories
+#       - cd C:\sandbox
+#       - git checkout experiment_CICD_MAS
+#       - git "pull
       
 test_one:    
       stage: test
@@ -23,5 +23,5 @@ test_one:
       - MAS
       script:     
       - echo "Test cicd in sandbox"
-      - Rscript.exe "C:\succes_test.R"
+      - Rscript.exe "succes_test.R"
 
