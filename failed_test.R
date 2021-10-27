@@ -7,3 +7,5 @@ lib.load(testthat = '1.0.2')
 test_that("fail test", {
   expect_equal(1, 0)
 })
+
+devtools::test(reporter = c("summary", "fail"))
