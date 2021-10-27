@@ -23,5 +23,5 @@ test_one:
       - MAS
       script:     
       - echo "Test cicd in sandbox"
-      - Rscript.exe "failed_test.R"
+      - python "a_failing_test.py"
       # - Rscript -e 'stopifnot(all(sapply(devtools::check(), length) == 0L))'
