@@ -23,5 +23,4 @@ test_one:
       - MAS
       script:     
       - echo "Test cicd in sandbox"
-      - Rscript.exe "succes_test.R"
-
+      - Rscript.exe "failed_test.R"
