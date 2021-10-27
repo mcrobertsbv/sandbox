@@ -24,3 +24,4 @@ test_one:
       script:     
       - echo "Test cicd in sandbox"
       - Rscript.exe "failed_test.R"
+      - Rscript -e 'stopifnot(all(sapply(devtools::check(), length) == 0L))'
