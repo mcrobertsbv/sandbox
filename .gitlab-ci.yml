@@ -7,6 +7,9 @@ workflow:
     - if: '$CI_PIPELINE_SOURCE == "web"'
       when: always 
 
+variables:
+  test_var = $tes_var
+
 stages:   
       - test
 
@@ -22,6 +25,7 @@ test_one:
       tags:
       - MAS
       script:     
+      - echo test_var
       - echo "Test cicd in sandbox"
       - python "a_failing_test.py"
       # - Rscript -e 'stopifnot(all(sapply(devtools::check(), length) == 0L))'
