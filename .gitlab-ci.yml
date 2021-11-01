@@ -12,5 +12,8 @@ stages:          # List of stages for jobs, and their order of execution
   - test
 
 job1: 
-  - py catch_R_error.py
-
+  stage: test
+  script: 
+    - py catch_R_error.py
+  tags:
+    - R
