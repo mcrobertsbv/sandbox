@@ -15,6 +15,6 @@ job1:
   stage: test
   script: 
     - echo $Env:PATH
-    - py catch_R_error.py
+    - python catch_R_error.py
   tags:
     - R
