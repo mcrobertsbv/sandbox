@@ -4,6 +4,9 @@ before_script:
   - python -V  # Print out python version for debugging
   
 test:
+  tags:
+    - sandbox
   script:
-    - python hello_world.py
+    - pwd
+    - python test_hello_world.py
 
