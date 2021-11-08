@@ -6,6 +6,7 @@ prepare_env:
     - Python
   script:
     - echo "preparing environment, installing requirements"
+    - echo $env:path
     - pip install -r requirements.txt
     - pwd
 
