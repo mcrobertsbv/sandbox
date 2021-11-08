@@ -2,7 +2,7 @@ from hello_world import hello, goodbye
 import unittest
 import xmlrunner
 
-class TestFinances(unittest.TestCase):
+class TestHelloWorld(unittest.TestCase):
     def test_hello_output(self):
         self.assertEqual(hello(), 'Hello World')
 
