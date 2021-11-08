@@ -19,4 +19,4 @@ test:
   artifacts:
     when: always
     reports:
-      junit: report/*.xml
+      junit: reports/*.xml
