@@ -1,0 +1,4 @@
+### this file contains required packages ###
+
+xmlrunner >= 1.7.7
+unittest
