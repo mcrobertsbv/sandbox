@@ -15,6 +15,7 @@ test:
     - Python
   script:
     - echo "executing test"
+    - python test_hello_world.py
     - python test_hello_world.py --junitxml=report.xml
   artifacts:
     when: always
