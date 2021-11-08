@@ -5,7 +5,7 @@ before_script:
 
 prepare_env:
   tags:
-    - test
+    - python
   script:
     - echo "preparing environment, installing requirements"
     - pip install -r requirements.txt
@@ -13,7 +13,7 @@ prepare_env:
 
 test:
   tags:
-    - test
+    - python
   script:
     - echo "executing test"
     - python test_hello_world.py
