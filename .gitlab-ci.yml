@@ -5,8 +5,7 @@ before_script:
   
 test:
   tags:
-    - sandbox
+    - test
   script:
     - pwd
     - python test_hello_world.py
-
