@@ -4,11 +4,16 @@ before_script:
   - python -V  # Print out python version for debugging
 
 prepare_env:
-- pip install -r requirements.txt
+  tags:
+    - test
+  script:
+  - echo preparing environment, installing requirements
+  - pip install -r requirements.txt
+  - pwd
 
 test:
   tags:
     - test
   script:
-    - pwd
+    - echo executing test
     - python test_hello_world.py
