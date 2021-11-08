@@ -1,3 +1,5 @@
-print("Hello World")
+def hello():
+    return "Hello World"
 
-print("fixed deliberate error")
+def goodbye():
+    return "Goodbye"
