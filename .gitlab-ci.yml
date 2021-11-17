@@ -15,6 +15,7 @@ test:
     - Python
   script:
     - echo "executing test"
+    - echo "testvariable = $TESTVARIABLE"
     - python test_hello_world.py
   artifacts:
     when: always
