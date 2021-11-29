@@ -11,10 +11,27 @@
 stages:          # List of stages for jobs, and their order of execution
   - test
 
-job1: 
+RTest: 
   stage: test
   script: 
-    - echo $Env:PATH
-    - python catch_R_error.py
+    - echo "Running R tests"
+    - Rscript.exe "tests/test.R"
   tags:
     - R
+  artifacts:
+    when: always
+    reports:
+      junit: tests/R_test_out.xml
+
+
+PythonTest:
+  stage: test
+  script:
+    - echo "Running Python tests"
+    - python "tests/test_python.py"
+  tags:
+    - Python
+  artifacts:
+    when: always
+    reports:
+      junit: tests/testresults.xml
