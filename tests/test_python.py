@@ -6,7 +6,7 @@ class InitialTests(unittest.TestCase):
 
     def test_failure(self):
         """Test what happens when a unittest fails"""
-        self.assertTrue("apples" == "oranges", "You can't compare apples with oranges")
+        self.assertTrue("apples" != "oranges", "You can't compare apples with oranges")
 
     def test_succeed(self):
         """Test what happens when a test succeeds"""
@@ -20,7 +20,7 @@ class MoreTests(unittest.TestCase):
 
     def test_fail_2(self):
         """Fail"""
-        self.assertEqual(1, 2)
+        self.assertEqual(2, 2)
 
 if __name__ == "__main__":
     unittest.main(testRunner = xmlrunner.XMLTestRunner(output=str(os.getcwd()) + "./tests/python_reports"))

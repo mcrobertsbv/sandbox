@@ -1,5 +1,5 @@
 test_that("fail test", {
-  expect_equal(1, 0)
+  expect_equal(1, 1)
 })
 
 test_that("succeed test", {
@@ -7,5 +7,5 @@ test_that("succeed test", {
 })
 
 test_that("fail test again", {
-  expect_equal(1, 0)
+  expect_equal(1, 1)
 })
