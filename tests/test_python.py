@@ -2,6 +2,7 @@ import os
 import unittest
 import xmlrunner
 
+print(os.getcwd)
 class InitialTests(unittest.TestCase):
 
     def test_failure(self):
