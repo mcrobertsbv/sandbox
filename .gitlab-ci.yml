@@ -34,4 +34,4 @@ PythonTest:
   artifacts:
     when: always
     reports:
-      junit: tests/testresults.xml
+      junit: tests/python_reports/*.xml

@@ -2,7 +2,6 @@ import os
 import unittest
 import xmlrunner
 
-print(os.getcwd)
 class InitialTests(unittest.TestCase):
 
     def test_failure(self):
@@ -13,5 +12,15 @@ class InitialTests(unittest.TestCase):
         """Test what happens when a test succeeds"""
         self.assertTrue("apples" == "apples")
 
-with open(str(os.getcwd()) + '/testresults.xml', 'w+b') as output:
-    unittest.main(testRunner = xmlrunner.XMLTestRunner(output=output))
+class MoreTests(unittest.TestCase):
+
+    def test_succes_2(self):
+        """Success"""
+        self.assertEqual(1, 1)
+
+    def test_fail_2(self):
+        """Fail"""
+        self.assertEqual(1, 2)
+
+if __name__ == "__main__":
+    unittest.main(testRunner = xmlrunner.XMLTestRunner(output=str(os.getcwd()) + "./tests/python_reports"))
