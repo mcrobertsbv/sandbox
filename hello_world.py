@@ -1,2 +1,2 @@
 print("Hello World")
-# jsut some comment
+# just some comment
