@@ -1,2 +1,2 @@
 print("Hello World")
-print ("second try")
+print ("2nd try")
